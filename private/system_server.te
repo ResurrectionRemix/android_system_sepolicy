@@ -886,3 +886,11 @@ neverallow system_server { domain -system_server }:process ptrace;
 # CAP_SYS_RESOURCE was traditionally needed for sensitive /proc/PID
 # file read access. However, that is now unnecessary (b/34951864)
 neverallow system_server system_server:global_capability_class_set sys_resource;
+
+# dufont
+type dufont_service, app_api_service, system_server_service, service_manager_type;
+
+# theme
+type theme_data_file_26_0, app_api_service, system_server_service, service_manager_type;
+type theme_prop_26_0, app_api_service, system_server_service, service_manager_type;
+
